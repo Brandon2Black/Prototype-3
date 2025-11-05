@@ -402,7 +402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 882e87ba7c26a9d47a4f001002357e94, type: 3}
       propertyPath: m_Name
-      value: SimplePeople_Woman_Waitress_Brown
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 882e87ba7c26a9d47a4f001002357e94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,6 +454,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 882e87ba7c26a9d47a4f001002357e94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1639893709}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 882e87ba7c26a9d47a4f001002357e94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1639893713}
   m_SourcePrefab: {fileID: 100100000, guid: 882e87ba7c26a9d47a4f001002357e94, type: 3}
 --- !u!1 &1639893708 stripped
 GameObject:
@@ -468,7 +471,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639893708}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -482,7 +485,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -508,6 +511,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.411436, z: 1}
   m_Center: {x: 0, y: 1.205718, z: 0}
+--- !u!114 &1639893713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639893708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f708726a017469d85ee9c4b245a75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 2
+  gravityModifier: 1
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0

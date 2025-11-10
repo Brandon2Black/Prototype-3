@@ -354,6 +354,8 @@
 -analyzer:"/Applications/Unity/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Course Library/Scripts/MoveLeft.cs"
 "Assets/Course Library/Scripts/PlayerControllerr.cs"
+"Assets/Course Library/Scripts/RepeatBackground.cs"
+"Assets/Course Library/Scripts/SpawnManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+

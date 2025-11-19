@@ -30,18 +30,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-          isOnGround = true;
-        }
-        else if(collision.gameObject.CompareTag("Obstacle"))
+    
+       if(collision.gameObject.CompareTag("Obstacle"))
         {
            gameOver = true;
             Debug.Log("you're now getting railed by an obstacle, GAME OVER!!!");
           
         }
        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+         if (collision.gameObject.CompareTag("Ground"))
+        {
+          isOnGround = true;
+        }
     }
 }

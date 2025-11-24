@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public bool gameOver = false;
     private Animator playerAnim;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("you're now getting railed by an obstacle, GAME OVER!!!");
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
-          
+            explosionParticle.Play();
+           dirtParticle.Stop();
         }
        
     }
@@ -52,6 +55,7 @@ public class PlayerController : MonoBehaviour
          if (collision.gameObject.CompareTag("Ground"))
         {
           isOnGround = true;
+          dirtParticle.Play();
         }
     }
 }
